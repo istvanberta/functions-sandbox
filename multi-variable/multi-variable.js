@@ -1,11 +1,17 @@
-const input = document.querySelector('#input');
-const output = document.querySelector('#output');
+const calculator = document.forms.calculator;
 
-let x = 0;
-let y = function(x) {return x};
+let y = function() {return 0};
 
 function updateOutput() {
-    output.value = Number(y(Number(input.value)).toFixed(2));
+    calculator.output.value = y(...getInputValues());
 }
 
-input.addEventListener('input', updateOutput);
+function selectInputs() {
+    return calculator.querySelectorAll('#inputs input');
+}
+
+function getInputValues() {
+    return [...selectInputs()].map(input => input.valueAsNumber);
+}
+
+calculator.addEventListener('input', updateOutput);

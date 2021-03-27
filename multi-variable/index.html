@@ -31,33 +31,70 @@
       <h2 class="display-6 mb-0"><i class="bi bi-calculator"></i> Bármi kalkulátor <span class="fs-6 badge bg-primary translate-middle-y">PRO</span></h2>
       <p class="fs-5 text-secondary mb-4">-- Kiszámol mindent is.</p>
       <div class="row">
-        <form class="position-relative col-md-5 col-lg-4 border rounded bg-light">
-          <button class="btn btn-light btn-sm position-absolute end-0" type="button"><i class="bi bi-pencil-square"></i></button>
-          <div class="my-3">
-            <label for="input1" class="form-label">Bemenet (<strong>x1</strong>):</label>
-            <input type="number" id="input1" placeholder="0" class="form-control form-control-lg">
-          </div>
-          <div class="my-3">
-            <label for="input2" class="form-label">Bemenet (<strong>x2</strong>):</label>
-            <input type="number" id="input2" placeholder="0" class="form-control form-control-lg">
-          </div>
-          <div class="my-3">
-            <label for="output" class="form-label">Kimenet (<strong>y</strong>):</label>
-            <input type="text" id="output" placeholder="0" class="form-control form-control-lg">
-          </div>
+
+        <!-- Calculator section -->
+        <div class="col-md-5 col-lg-4">
+          <form id="calculator" class="position-relative border rounded px-3 bg-light">
+            <section id="buttons" class="position-absolute me-2 end-0">
+                <button class="btn px-2" type="button"><i class="bi bi-plus-square"></i></button>
+                <button class="btn px-2" type="button"><i class="bi bi-pencil"></i></button>
+                <button class="btn px-2" type="button"><i class="bi bi-gear"></i></button>
+            </section>
+            <section id="inputs">
+                <p class="input mt-4 mb-3">
+                    <label for="input1" class="form-label">Bemenet <small class="text-muted">(<span class="variable">x1</span>)</small></label>
+                    <input id="input1" class="form-control form-control-lg" type="number" placeholder="0">
+                </p>
+                <p class="input my-3">
+                    <label for="input2" class="form-label">Bemenet <small class="text-muted">(<span class="variable">x2</span>)</small></label>
+                    <input id="input2" class="form-control form-control-lg" type="number" placeholder="0">
+                </p>
+            </section>
+            <section id="outputs">
+                <p class="output my-3">
+                    <label for="output" class="form-label">Kimenet <small class="text-muted">(<span class="variable">y</span>)</small></label>
+                    <input id="output" class="form-control form-control-lg" type="text" placeholder="0">
+                </p>
+            </section>
         </form>
-        <article class="col-md-7 col-lg-8">
-          <section class="">
-            <h2 class="fs-5">Használat</h2>
-            <ol>
-              <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
-              <li>
-                <p>Az alábbi minta alapján gépeld be a függvényed.</p>
-                <pre class="bg-light p-3"><code>y = function(x) {return A_TE_KIFEJEZÉSED};</code></pre>
-              </li>
-            </ol>
-          </section>
-        </article>
+        </div>
+
+        <!-- Helper text section-->
+        <div class="col-md-7 col-lg-8">
+          <article>
+            <section class="border-bottom mb-3 pb-2">
+              <h2 class="position-relative fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#usage-section" class="d-block text-decoration-none text-reset">Használat <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <ol class="collapse show" id="usage-section">
+                <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
+                <li>
+                  <p>Az alábbi minta alapján gépeld be a függvényed.</p>
+                  <pre class="bg-light p-3"><code>y = function(x) {return A_TE_KIFEJEZÉSED};</code></pre>
+                </li>
+              </ol>
+            </section>
+            <section class="border-bottom mb-3 pb-2">
+              <h2 class="position-relative fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#javascript-section" class="d-block text-decoration-none text-reset">Matematikai műveletek Javascript-ben<i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <ol class="collapse" id="javascript-section">
+                <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
+                <li>
+                  <p>Az alábbi minta alapján gépeld be a függvényed.</p>
+                </li>
+              </ol>
+            </section>
+            <section class="border-bottom pb-2">
+              <h2 class="position-relative fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#exercises-section" class="d-block text-decoration-none text-reset">Feladatok <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <ol class="collapse" id="exercises-section">
+                <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
+                <li>
+                  <p>Az alábbi minta alapján gépeld be a függvényed.</p>
+                  <pre class="bg-light p-3"><code>y = function(x) {return A_TE_KIFEJEZÉSED};</code></pre>
+                </li>
+              </ol>
+            </section>
+
+          </article>
+        </div>
+
       </div>
     </main>
 
@@ -69,6 +106,7 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
-    <script src="multi-variable.js" defer></script>
+    <!-- <script src="multi-variable.js" defer></script> -->
+    <script src="test2.js" defer></script>
   </body>
 </html>
