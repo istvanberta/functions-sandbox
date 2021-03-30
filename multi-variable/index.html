@@ -11,6 +11,7 @@
     <title>Függvények játszótér</title>
   </head>
   <body>
+    
     <!-- Header section -->
     <header class="container-fluid navbar navbar-expand-md navbar-dark bg-dark">
       <h1 class="navbar-brand my-0"><i class="bi bi-code-slash"></i> Függvények játszótér</h1>
@@ -28,6 +29,12 @@
 
     <!-- Main section -->
     <main class="container py-4">
+
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Figyelem!</strong> Béta verzió.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
       <h2 class="display-6 mb-0"><i class="bi bi-calculator"></i> Bármi kalkulátor <span class="fs-6 badge bg-primary translate-middle-y">PRO</span></h2>
       <p class="fs-5 text-secondary mb-4">-- Kiszámol mindent is.</p>
       <div class="row">
@@ -62,36 +69,55 @@
         <!-- Helper text section-->
         <div class="col-md-7 col-lg-8">
           <article>
-            <section class="border-bottom mb-3 pb-2">
-              <h2 class="position-relative fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#usage-section" class="d-block text-decoration-none text-reset">Használat <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
-              <ol class="collapse show" id="usage-section">
-                <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
-                <li>
-                  <p>Az alábbi minta alapján gépeld be a függvényed.</p>
-                  <pre class="bg-light p-3"><code>y = function(x) {return A_TE_KIFEJEZÉSED};</code></pre>
-                </li>
-              </ol>
+            <section>
+              <h2 class="position-relative mb-3 fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#help-text-1" class="d-block text-reset">Ez mi ez? <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <div class="collapse show" id="help-text-1">
+                <p>Programozható kalkulátor függvények gyakorlati alkalmazásának demonstrálására.</p>
+                <p>A függvényt abban az értelmezésében használja, miszerint az egy vagy több bemeneti értékből egy kimeneti értéket produkál. A bemenetek a függvény változóit szimbolizálják, a kimenet pedig a függvény értékét.</p>
+              </div>
             </section>
-            <section class="border-bottom mb-3 pb-2">
-              <h2 class="position-relative fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#javascript-section" class="d-block text-decoration-none text-reset">Matematikai műveletek Javascript-ben<i class="position-absolute end-0 bi bi-plus"></i></a></h2>
-              <ol class="collapse" id="javascript-section">
-                <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
-                <li>
-                  <p>Az alábbi minta alapján gépeld be a függvényed.</p>
-                </li>
-              </ol>
+            <section>
+              <h2 class="position-relative mb-3 fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#help-text-2" class="d-block text-reset">Használat <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <div class="collapse show" id="help-text-2">
+                <ol>
+                  <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
+                  <li>
+                    <p>Az alábbi minták egyikét használva gépeld be a függvényed.</p>
+                    <pre class="bg-light p-3"><code>y = function(x1, x2) {return A_TE_KIFEJEZÉSED};</code></pre>
+                    <pre class="bg-light p-3"><code>y = (x1, x2) => A_TE_KIFEJEZÉSED;</code></pre>
+                  </li>
+                </ol>
+              </div>
             </section>
-            <section class="border-bottom pb-2">
-              <h2 class="position-relative fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#exercises-section" class="d-block text-decoration-none text-reset">Feladatok <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
-              <ol class="collapse" id="exercises-section">
-                <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
-                <li>
-                  <p>Az alábbi minta alapján gépeld be a függvényed.</p>
-                  <pre class="bg-light p-3"><code>y = function(x) {return A_TE_KIFEJEZÉSED};</code></pre>
-                </li>
-              </ol>
+            <section>
+              <h2 class="position-relative mb-3 fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#help-text-3" class="d-block text-reset">Matematikai műveletek<i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <div class="collapse" id="help-text-3">
+                <h3 class="mb-3 fs-6 fw-bold">Alapműveletek</h3>
+                <ul>
+                  <li><p>Összeadás: <code class="bg-light">+</code></p></li>
+                  <li><p>Kivonás: <code class="bg-light">-</code></p></li>
+                  <li><p>Szorzás: <code class="bg-light">*</code></p></li>
+                  <li><p>Osztás: <code class="bg-light">/</code></p></li>
+                </ul>
+                <h3 class="mb-3 fs-6 fw-bold">Egyéb műveletek</h3>
+                <ul>
+                  <li>
+                    <p>Hatványozás: <code class="bg-light">**</code></p>
+                    <p>pl.: 5 a másodikon</p>
+                    <pre class="bg-light p-3"><code>5 ** 2</code></pre>
+                  </li>
+                  <li>
+                    <p>Gyökvonás: <code class="bg-light">Math.sqrt()</code></p>
+                    <p>pl.: négyzetgyök 81</p>
+                    <pre class="bg-light p-3"><code>Math.sqrt(81)</code></pre>
+                  </li>
+                </ul>
+                <h3 class="mb-3 fs-6 fw-bold">Speciális értékek:</h3>
+                <ul>
+                  <li><p>A pí szám: <code class="bg-light">Math.PI</code></p></li>
+                </ul>
+              </div>
             </section>
-
           </article>
         </div>
 
