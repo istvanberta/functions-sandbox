@@ -7,7 +7,8 @@ let y = function() {return 0};
 // updateOutput() functionality
 
 function updateOutput() {
-    calculator.output.value = y(...getInputValues());
+    
+    calculator.output.value = calculator.rounding.checked ? Math.round( y(...getInputValues()) ) : y(...getInputValues());
 }
 
 function getInputValues() {
@@ -15,7 +16,7 @@ function getInputValues() {
 }
 
 function selectInputs() {
-    return calculator.querySelectorAll('#inputs input');
+    return calculator.querySelectorAll('.input-field');
 }
 
 
@@ -29,7 +30,7 @@ function addInput() {
 
 function setNextInputNumber(input) {
     numberOfInputs++;
-    input.querySelector('input').id = 'input' + numberOfInputs;
+    input.querySelector('.input-field').id = 'input' + numberOfInputs;
     input.querySelector('label').htmlFor = 'input' + numberOfInputs;
     input.querySelector('.variable').textContent = 'x' + numberOfInputs;
     return input;

@@ -51,25 +51,25 @@
             <section id="settings" class="collapse">
               <p class="mt-4 mb-2">Beállítások:</p>
               <p class="form-check form-switch pb-2 border-bottom">
-                <label for="precision" class="form-check-label">Kerekítés egészekre</label>
-                <input id="precision" class="form-check-input" type="checkbox">
+                <label for="rounding" class="form-check-label">Kerekítés egészekre</label>
+                <input id="rounding" class="form-check-input" type="checkbox">
               </p>
             </section>
             <section id="inputs">
               <p class="input mt-4 mb-3">
-                <input id="label-editor" class="label-text-editor form-control form-control-sm w-50 mb-2" type="text" placeholder="Bemenet" hidden>
+                <input class="label-text-editor form-control form-control-sm w-50 mb-2" type="text" placeholder="Bemenet" hidden>
                 <label for="input1" class="editable form-label"><span class="label-text">Bemenet</span> <small class="text-muted">(<span class="variable">x1</span>)</small></label>
-                <input id="input1" class="form-control form-control-lg" type="number" placeholder="0">
+                <input id="input1" class="input-field form-control form-control-lg" type="number" step="any" placeholder="0">
               </p>
-              <p class="input my-3">
-                <input id="label-editor" class="label-text-editor form-control form-control-sm w-50 mb-2" type="text" placeholder="Bemenet" hidden>
+              <p class="input mt-4 mb-3">
+                <input class="label-text-editor form-control form-control-sm w-50 mb-2" type="text" placeholder="Bemenet" hidden>
                 <label for="input2" class="editable form-label"><span class="label-text">Bemenet</span> <small class="text-muted">(<span class="variable">x2</span>)</small></label>
-                <input id="input2" class="form-control form-control-lg" type="number" placeholder="0">
+                <input id="input2" class="input-field form-control form-control-lg" type="number" step="any" placeholder="0">
               </p>
             </section>
             <section id="outputs">
-              <p class="output my-3">
-                <input id="label-editor" class="label-text-editor form-control form-control-sm w-50 mb-2" type="text" placeholder="Kimenet" hidden>
+              <p class="output mt-4 mb-3">
+                <input class="label-text-editor form-control form-control-sm w-50 mb-2" type="text" placeholder="Kimenet" hidden>
                 <label for="output" class="editable form-label"><span class="label-text">Kimenet</span> <small class="text-muted">(<span class="variable">y</span>)</small></label>
                 <input id="output" class="form-control form-control-lg" type="text" placeholder="0">
               </p>
