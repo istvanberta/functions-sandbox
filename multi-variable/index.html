@@ -82,36 +82,51 @@
         <div class="col-md-7 col-lg-8">
           <article>
             <section>
-              <h2 class="position-relative mb-3 fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#help-text-1" class="d-block text-reset">Ez mi ez? <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <h2 class="position-relative mb-3 fs-5"><a role="button" data-bs-toggle="collapse" href="#help-text-1" class="d-block text-reset">Ez mi ez? <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
               <div class="collapse show" id="help-text-1">
-                <p>Programozható kalkulátor függvények gyakorlati alkalmazásának demonstrálására.</p>
-                <p>A függvényt abban az értelmezésében használja, miszerint az egy vagy több bemeneti értékből egy kimeneti értéket produkál. A bemenetek a függvény változóit szimbolizálják, a kimenet pedig a függvény értékét.</p>
+                <p><strong>Programozható kalkulátor függvények gyakorlati alkalmazásának demonstrálására.</strong></p>
+                <p>A függvényt abban az értelmezésében használja, miszerint az <strong>egy vagy több bemeneti értékből egy kimeneti értéket produkál</strong>. A bemenetek a függvény változóit szimbolizálják, a kimenet pedig a függvény értékét.</p>
               </div>
             </section>
             <section>
-              <h2 class="position-relative mb-3 fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#help-text-2" class="d-block text-reset">Használat <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <h2 class="position-relative mb-3 fs-5"><a role="button" data-bs-toggle="collapse" href="#help-text-2" class="d-block text-reset">Használat <i class="position-absolute end-0 bi bi-plus"></i></a></h2>
               <div class="collapse show" id="help-text-2">
+                <p>Készítsünk kalkulátort, amelyik kiszámolja egy téglatest felszínét. A számításhoz három adatra van szükségünk, a téglatest hosszúságára, szélességére és magasságára.</p>
                 <ol>
-                  <li><p>Az <strong>F12</strong> gombbal nyisd meg a webböngésződben a web konzolt.</p></li>
+                  <li><p>A <i class="bi bi-plus-square"></i> gombra kattintva adjunk a kalkulátorhoz egy újabb bemenetet.</p></li>
                   <li>
-                    <p>Az alábbi minták egyikét használva gépeld be a függvényed.</p>
+                    <p class="mb-1">A <i class="bi bi-pencil"></i> gombra kattintva nevezzük át a bemeneteket és a kimenetet. Rendre: hosszúság, szélesség, magasság és felszín. A mentés gombbal véglegesítsük az átnevezést.</p>
+                    <p><small>Megjegyzés: A fenti lépés kihagyható, a számításokat a feliratok nem befojásolják.</small></p>
+                  </li>
+                  <li>A <i class="bi bi-gear"></i> gombbal a végeredmény kerekítési beállításain változtathatunk.</li>
+                </ol>
+                <p>A kalkulátor programozása Javascript nyelven történik a webböngésző konzoljában.</p>
+                <ol start="4">
+                  <li>
+                    <p class="mb-1">Az <strong>F12</strong> gomb megnyomásával, vagy a böngésző menüjében a feljelsztői eszközöket kivállasztva nyissuk meg a konzolt.</p>
+                    <p><small>Megjegyzés: A konzol csak a böngészők asztali számítógépre kiadott változataiban (PC, notebook) érhető el, mobil eszközökön (Android, iOS) nem található meg.</small></p>
+                  </li>
+                  <li>
+                    <p>Az alábbi minták egyikét használva gépeljük be a függvényünket.</p>
                     <pre class="bg-light p-3"><code>y = function(x1, x2) {return A_TE_KIFEJEZÉSED};</code></pre>
                     <pre class="bg-light p-3"><code>y = (x1, x2) => A_TE_KIFEJEZÉSED;</code></pre>
+                    <p>Mi három változót fogunk használni, a téglatest három méretét. A függvényben jelöljük őket <var>x1</var>, <var>x2</var>, <var>x3</var>-mal. Ennek megfelelően a begépelendő függvényünk így fog kinézni:</p>
+                    <pre class="bg-light p-3"><code>y = function(x1, x2, x3) {return 2 * (x1*x2 + x1*x3 + x2*x3)};</code></pre>
                   </li>
                 </ol>
               </div>
             </section>
             <section>
-              <h2 class="position-relative mb-3 fs-5 fw-bold"><a role="button" data-bs-toggle="collapse" href="#help-text-3" class="d-block text-reset">Matematikai műveletek<i class="position-absolute end-0 bi bi-plus"></i></a></h2>
+              <h2 class="position-relative mb-3 fs-5"><a role="button" data-bs-toggle="collapse" href="#help-text-3" class="d-block text-reset">Matematikai műveletek<i class="position-absolute end-0 bi bi-plus"></i></a></h2>
               <div class="collapse" id="help-text-3">
-                <h3 class="mb-3 fs-6 fw-bold">Alapműveletek</h3>
+                <h3 class="mb-3 fs-6">Alapműveletek</h3>
                 <ul>
                   <li><p>Összeadás: <code class="bg-light">+</code></p></li>
                   <li><p>Kivonás: <code class="bg-light">-</code></p></li>
                   <li><p>Szorzás: <code class="bg-light">*</code></p></li>
                   <li><p>Osztás: <code class="bg-light">/</code></p></li>
                 </ul>
-                <h3 class="mb-3 fs-6 fw-bold">Egyéb műveletek</h3>
+                <h3 class="mb-3 fs-6">Egyéb műveletek</h3>
                 <ul>
                   <li>
                     <p>Hatványozás: <code class="bg-light">**</code></p>
@@ -124,7 +139,7 @@
                     <pre class="bg-light p-3"><code>Math.sqrt(81)</code></pre>
                   </li>
                 </ul>
-                <h3 class="mb-3 fs-6 fw-bold">Speciális értékek:</h3>
+                <h3 class="mb-3 fs-6">Speciális értékek:</h3>
                 <ul>
                   <li><p>A pí szám: <code class="bg-light">Math.PI</code></p></li>
                 </ul>
